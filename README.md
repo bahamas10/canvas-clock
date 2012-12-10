@@ -3,7 +3,7 @@ HTML5 Canvas Clock
 
 A simple clock using HTML5 Canvas
 
-[View the live demo here](https://bahamas10.github.com/canvas-clock)
+[View the live demo here](http://bahamas10.github.com/canvas-clock)
 
 Looking Forward...
 ------------------
