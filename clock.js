@@ -9,6 +9,8 @@ var center = {
   y: HEIGHT / 2
 };
 
+var BLOCK_SIZE = 10;
+
 // erase the debug
 console = console || {};
 console.log = function() {};
@@ -45,7 +47,7 @@ function drawHands() {
   for (var i = 0; i < 60; ++i) {
     var coords = coordinates(i / 60);
     var r = i % 5 === 0 ? 5 : 2;
-    ctx.fillRect(coords.x, coords.y, r, r);
+    ctx.fillRect(coords.x - (r/2), coords.y - (r/2), r, r);
   }
 }
 
@@ -56,7 +58,7 @@ function drawSeconds(date) {
   var seconds = date.getSeconds();
   var coords = coordinates(seconds / 60);
   ctx.fillStyle = '#f00';
-  ctx.fillRect(coords.x, coords.y, 10, 10);
+  ctx.fillRect(coords.x - BLOCK_SIZE / 2, coords.y - BLOCK_SIZE / 2, BLOCK_SIZE, BLOCK_SIZE);
   console.log('seconds = %d, x = %d, y = %d', seconds, coords.x, coords.y);
 }
 
@@ -67,7 +69,7 @@ function drawMinute(date) {
   var minute = date.getMinutes();
   var coords = coordinates(minute / 60);
   ctx.fillStyle = '#00f';
-  ctx.fillRect(coords.x, coords.y, 10, 10);
+  ctx.fillRect(coords.x - BLOCK_SIZE / 2, coords.y - BLOCK_SIZE / 2, BLOCK_SIZE, BLOCK_SIZE);
   console.log('minute = %d, x = %d, y = %d', minute, coords.x, coords.y);
 }
 
@@ -78,7 +80,7 @@ function drawHour(date) {
   var hour = date.getHours();
   var coords = coordinates(hour % 12 / 12);
   ctx.fillStyle = '#0f0';
-  ctx.fillRect(coords.x, coords.y, 10, 10);
+  ctx.fillRect(coords.x - BLOCK_SIZE / 2, coords.y - BLOCK_SIZE / 2, BLOCK_SIZE, BLOCK_SIZE);
   console.log('hour = %d, x = %d, y = %d', hour, coords.x, coords.y);
 }
 
