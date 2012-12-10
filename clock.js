@@ -108,6 +108,7 @@ function init() {
   ctx = canvas.getContext('2d');
   canvas.width = WIDTH;
   canvas.height = HEIGHT;
+  loop();
   setInterval(loop, 1000);
 }
 
