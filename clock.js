@@ -1,5 +1,3 @@
-var canvas, ctx;
-
 /** Config **/
 var WIDTH = 500;
 var HEIGHT = 500;
@@ -14,6 +12,7 @@ var COLORS = {
 var DRAW_CENTER = true;
 /** end config **/
 
+var canvas, ctx;
 var center = {
   x: WIDTH / 2,
   y: HEIGHT / 2
