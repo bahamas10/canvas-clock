@@ -9,6 +9,10 @@ var center = {
   y: HEIGHT / 2
 };
 
+// erase the debug
+console = console || {};
+console.log = function() {};
+
 /**
  * Convert degrees to radians
  */
