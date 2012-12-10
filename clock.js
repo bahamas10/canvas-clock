@@ -62,7 +62,8 @@ function drawSeconds(date) {
   var seconds = date.getSeconds();
   var coords = coordinates(seconds / 60);
   ctx.fillStyle = COLORS.seconds;
-  ctx.fillRect(coords.x - BLOCK_SIZE / 2, coords.y - BLOCK_SIZE / 2, BLOCK_SIZE, BLOCK_SIZE);
+  ctx.fillRect(coords.x - BLOCK_SIZE / 2, coords.y - BLOCK_SIZE / 2,
+      BLOCK_SIZE, BLOCK_SIZE);
 }
 
 /**
@@ -72,7 +73,8 @@ function drawMinute(date) {
   var minute = date.getMinutes();
   var coords = coordinates(minute / 60);
   ctx.fillStyle = COLORS.minutes;
-  ctx.fillRect(coords.x - BLOCK_SIZE / 2, coords.y - BLOCK_SIZE / 2, BLOCK_SIZE, BLOCK_SIZE);
+  ctx.fillRect(coords.x - BLOCK_SIZE / 2, coords.y - BLOCK_SIZE / 2,
+      BLOCK_SIZE, BLOCK_SIZE);
 }
 
 /**
@@ -82,7 +84,8 @@ function drawHour(date) {
   var hour = date.getHours();
   var coords = coordinates(hour % 12 / 12);
   ctx.fillStyle = COLORS.hours;
-  ctx.fillRect(coords.x - BLOCK_SIZE / 2, coords.y - BLOCK_SIZE / 2, BLOCK_SIZE, BLOCK_SIZE);
+  ctx.fillRect(coords.x - BLOCK_SIZE / 2, coords.y - BLOCK_SIZE / 2,
+      BLOCK_SIZE, BLOCK_SIZE);
 }
 
 /**
